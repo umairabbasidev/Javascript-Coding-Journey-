@@ -29,6 +29,32 @@ const obj = {
 }
 
 let Myfunc = function  (){
-console.log('Hello World');
+// console.log('Hello World');
 }
 // console.log(typeof Myfunc)
+
+
+// __________X_______X___________X
+
+// Memory 
+// Stack (PrimitiveDataType), Heap(Non-primitive)
+
+
+let myYoutubeName = 'umairabbasidotcom';
+let anotherName = myYoutubeName;
+anotherName = 'umairdotcom'
+// console.log(myYoutubeName);
+// console.log(anotherName);
+
+let userOne = {
+ email:"user@gmail.com",
+ age:21
+
+}
+
+let userTwo = userOne
+// console.log(userTwo)
+userTwo.email = "abc@gmail.com"
+
+console.log(userOne.email) //abc@gmail.com
+console.log(userTwo.email) //abc@gmail.com
