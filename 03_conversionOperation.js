@@ -6,15 +6,16 @@
 // convert in number to other datatypes
 
 // let score = '33'
-// console.log(typeof score) // string
+// // console.log(typeof score) // string
 
 // let valueInNumber = Number(score)
 // console.log(typeof valueInNumber) // number convert in into number
+// console.log(valueInNumber)  // 33
 
 
 // let score = '33abc'
 // let valueInNumber = Number(score)
-// console.log(typeof valueInNumber)
+// console.log(typeof valueInNumber) // number
 // console.log(valueInNumber) // NaN
 
 
@@ -101,3 +102,41 @@
 // console.log(typeof stringNumber) // string
 
 // ____X_______X______
+
+
+
+// ******************** Operations ******************
+
+let value = 3;
+let negativeValue = -value
+// console.log(negativeValue)
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2/2);
+// console.log(2*2);
+// console.log(2**3);
+// console.log(3%2);
+
+// let str1 = 'Hello';
+// let str2 = 'Umair';
+// console.log(str1 + " " + str2);
+
+
+// console.log('1' + 2); // 12
+// console.log(1 + '2'); // 12
+// console.log('1' + 2 + 2); // 122
+
+// console.log(true); // true
+// console.log(+true); // 1
+// console.log(false) // false
+// console.log(+false) // 0
+
+
+
+let num1,num2,num3;
+num1=num2=num3 = 2+2
+// console.log(num1) //4
+
+let gameCounter = 100;
+gameCounter++;
+// console.log(gameCounter) // 101
