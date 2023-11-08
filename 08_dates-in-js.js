@@ -31,7 +31,33 @@
 
 
 
-let myCreatedDate = new Date("2023-10-8")
-console.log(myCreatedDate.toLocaleString())
+// let myCreatedDate = new Date("2023-10-8")
+// console.log(myCreatedDate.toLocaleString())
+
+// _______X_________X________
+
+
+// let myDate = new Date()
+// console.log(myDate)
+// console.log(myDate.getDay())
+// console.log(myDate.getMonth())
+// console.log(myDate.getFullYear())
+// console.log(myDate.getDate())
+// console.log(myDate.getHours())
+// console.log(myDate.getMinutes())
+// console.log(myDate.getSeconds())
+// console.log(myDate.getMilliseconds())
+
+
+
+let dob = new Date('16,may-2002')
+console.log(dob)
+console.log(dob.getTime())
+let now = new Date()
+console.log(now.getTime())
+let diff = now-dob
+console.log(diff)
+let convert = diff/(1000*60*60*24*30*12)
+console.log(Math.floor(convert))
 
  
