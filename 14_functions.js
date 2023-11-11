@@ -87,5 +87,71 @@ function logginUserMessage (username='umair'){  // default parameter
 
 logginUserMessage()
 
-console.log(logginUserMessage())
-console.log(logginUserMessage('asad'))
+// console.log(logginUserMessage())
+// console.log(logginUserMessage('asad'))
+
+// _________X_____X______
+
+// rest operator in function 
+
+
+function calculateCartPrice(num1){
+return num1
+}
+
+// console.log(calculateCartPrice(200,300,4000))  /// it shows only first arugument 200  
+
+
+function calculateCartPrice(...num1){  // when we use rest operator it retun all the arguments in array form 
+ return num1
+ }
+ 
+ // console.log(calculateCartPrice(200,300,4000,1000,400,4003))   //  [200, 300, 4000]
+
+
+
+
+ 
+function calculateCartPrice(val1,val2,val3,...num1){
+ return num1
+ }
+ 
+ // console.log(calculateCartPrice(200,300,4000,1000,400,4003))   // [1000, 400, 4003]
+
+
+ // _____X______X______
+
+ // object use in functions 
+
+ const user = {
+username:"umair",
+price:200
+ }
+
+
+
+function handleObject(anyobject){
+console.log(`username is ${anyobject.username} and price is ${anyobject.price}`)
+}
+
+// handleObject(user)
+
+
+// handleObject({
+//  username:"uzair",
+//  price:400
+// })
+
+
+
+let myArray = ['umair','abbasi']
+// let myArray2 = ['abbasi']
+
+function handleArray(anyarray){
+
+return   `name is ${anyarray[0]}`
+}
+// console.log(handleArray(myArray))
+
+
+// console.log(handleArray(['umair']))
