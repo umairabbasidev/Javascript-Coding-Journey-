@@ -10,6 +10,7 @@
 const mySymbol = Symbol("key1")
 // console.log(typeof mySymbol)
 // object literals 
+
 const jsUser = {
  name:"Umair",
 [ mySymbol]:"mykey1",  // adding symbol in object using [] in syntex 
