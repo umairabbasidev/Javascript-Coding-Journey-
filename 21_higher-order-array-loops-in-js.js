@@ -230,6 +230,53 @@
 //  console.log(value,key)  // give key and value both
 // })
 
+
+const coding =['javascript','ruby','python','swift','java']
+// coding.forEach((value)=>{
+// console.log(value)
+// })
+
+// coding.forEach(function(value){
+// console.log(value)
+// })
+
+function printMe(item){
+ console.log(item)
+}
+// function  as a reference bhi use kr sakte hn
+// coding.forEach(printMe)
+
+// coding.forEach((item,index,array)=>{
+// console.log(item,index,array)
+// })
+
+
+const myCoding = [
+ {
+  languageName:"javascript",
+  languageFileName:"js"
+ },
+ {
+  languageName:"python",
+  languageFileName:"py"
+ },
+ {
+  languageName:"java",
+  languageFileName:"java"
+ },
+]
+
+
+
+myCoding.forEach((item)=>{
+console.log(item.languageFileName)
+})
+
+
+
+
+
+
 // Summary(As I understood) :
 // We can use For of loop for values printing/for iterating over values directly over [[[[ Strings & Array  ]]]
 // We can use For in loop for values printing/for iterating over values by Indexes/Keys over Objects and Arrays & Strings .
