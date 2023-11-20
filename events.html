@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Html Events </title>
+
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+ <h2>Amazing Image</h2>
+
+<div> 
+  <ul id="images">
+   <li><img width="200px" id="photoshop"
+     src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+     alt="photoshop"></li>
+   <li><img width="200px" id="japan"
+     src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+     alt=""></li>
+   <li><img width="200px" id="river"
+     src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+     alt=""></li>
+   <li><img width="200px" id="owl"
+     src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+     alt="" ></li>
+   <li><img width="200px" id="prayer"
+     src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+     alt=""></li>
+   <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+  </ul>
+ </div> 
+
+<!-- chatgpt example of events bubbling and event capturing -->
+
+<!-- <div id="outer">
+ <div id="middle">
+     <div id="inner">
+         Click me!
+     </div>
+ </div>
+</div> -->
+
+</body>
+<!-- <script>
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById('images').addEventListener('click',function(){
+ console.log('clicked inside the ul')
+},false)
+
+
+document.getElementById('owl').addEventListener('click',function(){
+ console.log('owl clicked')
+},false)
+
+
+
+
+
+
+
+
+
+
+ // document.getElementById("owl").onclick = function(){
+ //  alert("owl clicked") // ye approach theek h pr is mai features kam milte hn eg propogation etc 
+ // }
+// third and best approach for events
+
+
+// document.getElementById('owl').addEventListener('click',function(){
+//  alert("owl clicked again")
+// })  best approach
+
+
+
+// document.getElementById('owl').addEventListener('click',function(e){
+// console.log(e)
+// },true)
+
+
+
+
+
+
+// document.getElementById('owl').addEventListener('click',()=>{
+//  alert("owl clicked again")
+// })
+
+</script> -->
+
+
+<!-- task  kisi bhi image pr click krin to wo remove ho jay  -->
+<script>
+ document.querySelector("#images").addEventListener('click',function(e){
+// console.log(e.target.parentNode)
+console.log(e.target.tagName)
+if (e.target.tagName==='IMG') {
+ let removeIt  = e.target.parentNode
+removeIt.remove() 
+}
+
+// removeIt.parentNode.removeChild(removeIt)
+
+ },false)
+</script>
+
+<!-- <script>
+
+ document.getElementById('google').addEventListener('click',function(e){
+console.log('google clicked')
+e.preventDefault()
+ },false)
+</script> -->
+
+
+
+<!-- chat gpt exampleof event bubbling which is default behaviour of html event -->
+
+<!-- <script>
+ document.getElementById('outer').addEventListener('click', function() {
+     console.log('Outer div clicked!');
+ });
+
+ document.getElementById('middle').addEventListener('click', function() {
+     console.log('Middle div clicked!');
+ });
+
+ document.getElementById('inner').addEventListener('click', function(e) {
+     console.log('Inner div clicked!');
+// e.stopPropagation()  //is ko hum stop bhi kr sakkte hn
+ }); 
+</script> -->
+
+
+
+<!-- chat gpt exampleof event capturing . -->
+
+<!-- <script>
+ document.getElementById('outer').addEventListener('click', function() {
+     console.log('Outer div clicked during capturing phase!');
+ }, true);
+
+ document.getElementById('middle').addEventListener('click', function() {
+     console.log('Middle div clicked during capturing phase!');
+ }, true);
+
+ document.getElementById('inner').addEventListener('click', function() {
+     console.log('Inner div clicked during capturing phase!');
+ }, true);
+</script> -->
+</html>
+
+
+
