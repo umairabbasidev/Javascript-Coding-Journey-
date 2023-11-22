@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>APi Request </title>
+</head>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.card h3 {
+    color: #333;
+}
+
+.card p {
+    color: #666;
+}
+
+</style>
+
+<body>
+
+ <div class="card">
+  <img src="" alt="Image" id="img" >
+  <h3 id="name">Card Title</h3>
+  <p id="para">This is a simple card example.</p>
+</div>
+
+</body>
+<script>
+ const requestUrl = 'https://api.github.com/users/umairabbasidev'
+ let data;
+
+ const xhr = new XMLHttpRequest();
+ xhr.open('GET', requestUrl);
+ xhr.onreadystatechange = function () {
+
+  // console.log(this.readyState);
+  if (xhr.readyState === 4) {
+   data = JSON.parse( this.responseText)
+   document.getElementById("name").innerText = data['login']
+   const img = document.getElementById('img')
+   // console.log(img)
+   img.setAttribute("src",data.avatar_url)
+   document.getElementById('para').innerHTML = data.id
+   // document.getElementsByTagName
+
+   // console.log(data)
+   // console.log(typeof data)
+    // console.log(data['followers'])
+    // console.log(data.email)
+    // console.log(data.id)
+    // console.log(data.url)
+    // console.log(data.avatar_url)
+    // console.log(data)
+   }
+ }
+ xhr.send()
+ 
+
+// console.log(data)
+
+
+// console.log(name)
+// name.innerHTML = data
+
+
+
+// console.log(data)
+
+
+
+//  Certainly! This code is using JavaScript to make an HTTP request to the GitHub API and retrieve information about a user with the username 'umairabbasidev'. Let's break it down:
+
+// const requestUrl = 'https://api.github.com/users/umairabbasidev': This line defines the URL for the GitHub API endpoint that provides information about the user 'umairabbasidev'.
+
+// const xhr = new XMLHttpRequest();: This line creates a new XMLHttpRequest object, which is a built-in JavaScript object that allows you to make HTTP requests.
+
+// xhr.open('GET', requestUrl);: Here, the code sets up the HTTP request. It specifies that it's a 'GET' request (used for retrieving data) and provides the URL to request data from.
+
+// xhr.onreadystatechange = function () { ... }: This sets up an event handler that will be called whenever the state of the XMLHttpRequest object changes. The function inside will be executed at different stages of the request.
+
+// console.log(this.readyState);: This line logs the current state of the XMLHttpRequest object. The readyState property indicates the state of the request (0 for uninitialized, 1 for open, 2 for sent, 3 for receiving, and 4 for completed).
+
+// if (xhr.readyState === 4) { console.log(this.responseText) }: This checks if the request has been completed (readyState 4). If it has, it logs the responseText, which contains the data received from the GitHub API.
+
+// xhr.send(): This sends the actual HTTP request to the specified URL.
+
+// So, in summary, this code uses XMLHttpRequest to send a GET request to the GitHub API for the user 'umairabbasidev', and it logs the response when the request is completed. This is a basic way to interact with APIs using vanilla JavaScript.
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
